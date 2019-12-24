@@ -29,46 +29,11 @@
 </script>]]></content>
   </entry>
   <entry>
-    <title>gulpfile</title>
-    <url>/2019/12/24/gulpfile/</url>
-    <content><![CDATA[var gulp = require('gulp');
-var minifycss = require('gulp-minify-css');
-var uglify = require('gulp-uglify');
-var htmlmin = require('gulp-htmlmin');
-var htmlclean = require('gulp-htmlclean');
-// 压缩 public 目录 css
-gulp.task('minify-css', function() {
-    return gulp.src('./public/**/*.css')
-        .pipe(minifycss())
-        .pipe(gulp.dest('./public'));
-});
-// 压缩 public 目录 html
-gulp.task('minify-html', function() {
-  return gulp.src('./public/**/*.html')
-    .pipe(htmlclean())
-    .pipe(htmlmin({
-         removeComments: true,
-         minifyJS: true,
-         minifyCSS: true,
-         minifyURLs: true,
-    }))
-    .pipe(gulp.dest('./public'))
-});
-// 压缩 public/js 目录 js
-gulp.task('minify-js', function() {
-    return gulp.src('./public/**/*.js')
-        .pipe(uglify())
-        .pipe(gulp.dest('./public'));
-});
-// 执行 gulp 命令时执行的任务
-gulp.task('default', [
-    'minify-html','minify-css','minify-js'
-]);]]></content>
-  </entry>
-  <entry>
     <title>哈尔滨之行</title>
     <url>/2019/12/24/%E5%93%88%E5%B0%94%E6%BB%A8/</url>
-    <content><![CDATA[<p>摘要<br>&lt;!−−more−−&gt;</p>
+    <content><![CDATA[<p>摘要</p>
+<a id="more"></a>
+
 <blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
 <p><img src="/img/haerbin2.gif" alt=""><br><img src="/img/haerbin3.png" alt=""></p>

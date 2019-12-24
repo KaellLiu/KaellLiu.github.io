@@ -347,10 +347,11 @@
       
         
           
-            <blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
+            <p>摘要<br>&lt;!−− more −−&gt;</p>
+<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
 
-<p><img src="/img/haerbin2.gif" alt=""><br><img src="/img/haerbin3.png" alt=""><br><img src="/img/haerbin1.png" alt=""></p>
-
+<p><img src="/img/haerbin2.gif" alt=""><br><img src="/img/haerbin3.png" alt=""></p>
+<h6 id="等了半天就仨饺子"><a href="#等了半天就仨饺子" class="headerlink" title="等了半天就仨饺子~"></a>等了半天就仨饺子~</h6>
           
         
       
@@ -531,6 +532,159 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/gulpfile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="敖粥的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/24/gulpfile/" itemprop="url">gulpfile</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-24T19:50:34+08:00">
+                2019-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            var gulp = require('gulp');
+var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
+var htmlclean = require('gulp-htmlclean');
+// 压缩 public 目录 css
+gulp.task('minify-css', function() {
+    return gulp.src('./public/**/*.css')
+        .pipe(minifycss())
+        .pipe(gulp.dest('./public'));
+});
+// 压缩 public 目录 html
+gulp.task('minify-html', function() {
+  return gulp.src('./public/**/*.html')
+    .pipe(htmlclean())
+    .pipe(htmlmin({
+         removeComments: true,
+         minifyJS: true,
+         minifyCSS: true,
+         minifyURLs: true,
+    }))
+    .pipe(gulp.dest('./public'))
+});
+// 压缩 public/js 目录 js
+gulp.task('minify-js', function() {
+    return gulp.src('./public/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./public'));
+});
+// 执行 gulp 命令时执行的任务
+gulp.task('default', [
+    'minify-html','minify-css','minify-js'
+]);
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -577,7 +731,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

@@ -93,7 +93,7 @@
 
 
 
-  <meta name="keywords" content="旅游," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -104,21 +104,17 @@
 
 
 
-<meta name="description" content="摘要&lt;!−− more −−&gt; 优秀的人，不是不合群，而是他们合群的人里面没有你   等了半天就仨饺子~">
+<meta name="description" content="var gulp &#x3D; require(&#39;gulp&#39;); var minifycss &#x3D; require(&#39;gulp-minify-css&#39;); var uglify &#x3D; require(&#39;gulp-uglify&#39;); var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;); var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;); &#x2F;&#x2F; 压缩 pub">
 <meta property="og:type" content="article">
-<meta property="og:title" content="哈尔滨之行">
-<meta property="og:url" content="http://yoursite.com/2019/12/24/%E5%93%88%E5%B0%94%E6%BB%A8/index.html">
+<meta property="og:title" content="gulpfile">
+<meta property="og:url" content="http://yoursite.com/2019/12/24/gulpfile/index.html">
 <meta property="og:site_name" content="敖粥的博客">
-<meta property="og:description" content="摘要&lt;!−− more −−&gt; 优秀的人，不是不合群，而是他们合群的人里面没有你   等了半天就仨饺子~">
+<meta property="og:description" content="var gulp &#x3D; require(&#39;gulp&#39;); var minifycss &#x3D; require(&#39;gulp-minify-css&#39;); var uglify &#x3D; require(&#39;gulp-uglify&#39;); var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;); var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;); &#x2F;&#x2F; 压缩 pub">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/img/haerbin2.gif">
-<meta property="og:image" content="http://yoursite.com/img/haerbin3.png">
-<meta property="article:published_time" content="2019-12-24T08:05:04.000Z">
-<meta property="article:modified_time" content="2019-12-24T14:17:49.814Z">
+<meta property="article:published_time" content="2019-12-24T11:50:34.033Z">
+<meta property="article:modified_time" content="2019-12-24T11:51:04.926Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="旅游">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/img/haerbin2.gif">
 
 
 
@@ -148,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/12/24/哈尔滨/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/12/24/gulpfile/"/>
 
 
 
 
 
-  <title>哈尔滨之行 | 敖粥的博客</title>
+  <title>gulpfile | 敖粥的博客</title>
   
 
 
@@ -261,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/%E5%93%88%E5%B0%94%E6%BB%A8/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/24/gulpfile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -278,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">哈尔滨之行</h1>
+          <h1 class="post-title" itemprop="name headline">gulpfile</h1>
         
 
         <div class="post-meta">
@@ -290,7 +286,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-24T16:05:04+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-24T19:50:34+08:00">
                 2019-12-24
               </time>
             
@@ -300,28 +296,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%85%E6%B8%B8/" itemprop="url" rel="index">
-                    <span itemprop="name">旅游</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -350,11 +324,39 @@
       
 
       
-        <p>摘要<br>&lt;!−− more −−&gt;</p>
-<blockquote class="blockquote-center">优秀的人，不是不合群，而是他们合群的人里面没有你</blockquote>
-
-<p><img src="/img/haerbin2.gif" alt=""><br><img src="/img/haerbin3.png" alt=""></p>
-<h6 id="等了半天就仨饺子"><a href="#等了半天就仨饺子" class="headerlink" title="等了半天就仨饺子~"></a>等了半天就仨饺子~</h6>
+        var gulp = require('gulp');
+var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
+var htmlmin = require('gulp-htmlmin');
+var htmlclean = require('gulp-htmlclean');
+// 压缩 public 目录 css
+gulp.task('minify-css', function() {
+    return gulp.src('./public/**/*.css')
+        .pipe(minifycss())
+        .pipe(gulp.dest('./public'));
+});
+// 压缩 public 目录 html
+gulp.task('minify-html', function() {
+  return gulp.src('./public/**/*.html')
+    .pipe(htmlclean())
+    .pipe(htmlmin({
+         removeComments: true,
+         minifyJS: true,
+         minifyCSS: true,
+         minifyURLs: true,
+    }))
+    .pipe(gulp.dest('./public'))
+});
+// 压缩 public/js 目录 js
+gulp.task('minify-js', function() {
+    return gulp.src('./public/**/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./public'));
+});
+// 执行 gulp 命令时执行的任务
+gulp.task('default', [
+    'minify-html','minify-css','minify-js'
+]);
       
     </div>
     
@@ -371,12 +373,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/%E6%97%85%E6%B8%B8/" rel="tag">🏷 旅游</a>
-          
-        </div>
-      
 
       
       
@@ -386,14 +382,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/12/24/%E5%93%88%E5%B0%94%E6%BB%A8/" rel="next" title="哈尔滨之行">
+                <i class="fa fa-chevron-left"></i> 哈尔滨之行
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/24/gulpfile/" rel="prev" title="gulpfile">
-                gulpfile <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/24/page/" rel="prev" title="page">
+                page <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,17 +446,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -516,22 +507,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#等了半天就仨饺子"><span class="nav-number">1.</span> <span class="nav-text">等了半天就仨饺子~</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
